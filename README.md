@@ -5,3 +5,10 @@ Projekt Kwiaciarnia to strona internetowa dedykowana kwiaciarni. Strona nie tylk
 - HTML, CSS
 - Python Flask
 - SQLAlchemy
+
+### Funkcje
+Przeglądanie Oferty
+Zamawianie Online
+Zdjęcia i Opisy
+Promocje i Rabaty
+Kontakt
