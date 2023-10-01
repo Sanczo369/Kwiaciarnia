@@ -1,7 +1,12 @@
 from flask import Flask
 from flask_wtf import FlaskForm 
 from wtforms import StringField, EmailField, TelField, PasswordField, TextAreaField, BooleanField
+from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
+
+
+app.config.from_pyfile('config.cfg')
+db = SQLAlchemy(app)
 
 
 class RegistrationForm(FlaskForm):
