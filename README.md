@@ -7,8 +7,8 @@ Projekt Kwiaciarnia to strona internetowa dedykowana kwiaciarni. Strona nie tylk
 - SQLAlchemy
 
 ### Funkcje
-Przeglądanie Oferty
-Zamawianie Online
-Zdjęcia i Opisy
-Promocje i Rabaty
-Kontakt
+- Przeglądanie Oferty
+- Zamawianie Online
+- Zdjęcia i Opisy
+- Promocje i Rabaty
+- Kontakt
