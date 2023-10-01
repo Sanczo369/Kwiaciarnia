@@ -29,6 +29,22 @@ class ContactForm(FlaskForm):
     email = EmailField('E-mail', render_kw={"placeholder": "E-mail"})
     phone = TelField('Telefon', render_kw={"placeholder": "Telefon"})
     password = TextAreaField('Tekst', render_kw={"placeholder": "..."})  
+    
+    
+    
+# Tabele
+class Newsletter(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100)) 
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100)) 
+    surname = db.Column(db.String(100))
+    email = db.Column(db.String(100))  
+    phone = db.Column(db.String(100))
+    password = db.Column(db.String(100))
+    
 @app.route('/') 
 def index(): 
     return '<h1>Hello World!!!</h1>' 
