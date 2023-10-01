@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_wtf import FlaskForm 
-from wtforms import StringField, EmailField, TelField, PasswordField, TextAreaField
+from wtforms import StringField, EmailField, TelField, PasswordField, TextAreaField, BooleanField
 app = Flask(__name__)
 
 
@@ -14,6 +14,7 @@ class RegistrationForm(FlaskForm):
 class LoginForm(FlaskForm):
     email = EmailField('E-mail', render_kw={"placeholder": "E-mail"})
     password = PasswordField('Tekst', render_kw={"placeholder": "******"})
+    remember = BooleanField('Zapamiętaj mnie')
     
 class NewsletterForm(FlaskForm):
     email = EmailField('E-mail', render_kw={"placeholder": "E-mail"}) 
