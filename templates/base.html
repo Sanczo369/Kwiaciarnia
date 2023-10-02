@@ -16,7 +16,8 @@
 
         <title>{% block title%}<!-- Tytuł -->{% endblock %}</title>
     </head>
-    <body>          
+    <body>
+        {% include 'nav.html' %}         
         <div class="wrapper">
         {% block content %}
         <!-- Gotowe -->
