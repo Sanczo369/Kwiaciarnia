@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_wtf import FlaskForm 
 from wtforms import StringField, EmailField, TelField, PasswordField, TextAreaField, BooleanField
 from flask_sqlalchemy import SQLAlchemy
@@ -47,7 +47,7 @@ class User(db.Model):
     
 @app.route('/') 
 def index(): 
-    return '<h1>Hello World!!!</h1>' 
+    return render_template('index.html')
 
 if __name__ == '__main__': 
     app.run()
