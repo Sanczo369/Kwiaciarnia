@@ -12,4 +12,4 @@ def register():
     if request.method == "POST" and form.validate():
         flash('Thanks for registering')
         return redirect(url_for('login'))
-    return render_template('register.html', form=form, title="Rejestracja użytkowników")
+    return render_template('admin/register.html', form=form, title="Strona Rejestracji")
