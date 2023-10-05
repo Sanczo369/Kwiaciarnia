@@ -15,6 +15,12 @@ def register():
         hash_password = bcrypt.generate_password_hash(form.password.data)
         user = User(name=form.name.data, username=form.username.data, email=form.email.data, password=hash_password)
         db.session.add(user)
+        db.session.commit()
         flash(f'{form.name.data} Dziękujemy za rejestracje', 'sukces')
         return redirect(url_for('home'))
     return render_template('admin/register.html', form=form, title="Strona Rejestracji")
+
+@app.route('/login', methods=['GET', "POST"])
+def login():
+    form = LoginForm(request.form)
+    return render_template('admin/login.html', form=form, title="Strona Logowania")
