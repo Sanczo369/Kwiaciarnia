@@ -1,10 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'layout.html' %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for category, message in messages %}
+      <li class="alert alert-{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
 
-{% block title%}
-Admin Page
-{% endblock%}
-
-<!-- body_content -->
-{% block content %}
-Witam
-{% endblock %} 
+{% endblock content%}
