@@ -6,3 +6,8 @@ class RegistrationForm(Form):
     email = StringField('E-mail',[validators.Length(min=4, max=25)], render_kw={"placeholder": "E-mail"})
     password = PasswordField('Hasło', [validators.DataRequired(),validators.EqualTo('confirm', message="Hasło musi być takie samo")])
     confirm =  PasswordField('Powtórz Hasło')
+    
+    
+class LoginForm(Form):
+    email = StringField('E-mail',[validators.Length(min=4, max=25)], render_kw={"placeholder": "E-mail"})
+    password = PasswordField('Hasło', [validators.DataRequired()])
